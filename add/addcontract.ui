@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddContract</class>
+ <widget class="QDialog" name="AddContract">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>288</width>
+    <height>276</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Adaugare Contract Nou</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources.qrc">
+    <normaloff>:/copy</normaloff>:/copy</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>&amp;Contract</string>
+       </property>
+       <property name="buddy">
+        <cstring>contractLineEdit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="contractLineEdit">
+       <property name="styleSheet">
+        <string notr="true">* {
+	background-color: rgb(250, 250, 210);
+}
+
+:focus {
+	border: 1px solid rgb(154, 116, 38);
+}
+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>&amp;Auto</string>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+       <property name="buddy">
+        <cstring>autoLineEdit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="autoLineEdit">
+       <property name="styleSheet">
+        <string notr="true">* {
+	background-color: rgb(250, 250, 210);
+}
+
+:focus {
+	border: 1px solid rgb(154, 116, 38);
+}
+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QDateTimeEdit" name="programareDateTimeEdit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QDateTimeEdit {
+	background-color: rgb(250, 250, 210);
+}
+
+:focus {
+	border: 1px solid rgb(154, 116, 38);
+}
+</string>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QCheckBox" name="programareCheckBox">
+       <property name="text">
+        <string>Programare</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QComboBox" name="consilierComboBox"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>C&amp;onsilier</string>
+       </property>
+       <property name="buddy">
+        <cstring>consilierComboBox</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="nrAutoLineEdit">
+       <property name="styleSheet">
+        <string notr="true">* {
+	background-color: rgb(250, 250, 210);
+}
+
+:focus {
+	border: 1px solid rgb(154, 116, 38);
+}
+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>&amp;Numar Auto</string>
+       </property>
+       <property name="buddy">
+        <cstring>nrAutoLineEdit</cstring>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="contactatCheckBox">
+     <property name="text">
+      <string>C&amp;ontactat</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="observatiiTextEdit"/>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="loadingLabel">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelButton">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="text">
+        <string>A&amp;nuleaza</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../resources.qrc">
+         <normaloff>:/cancel</normaloff>:/cancel</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveButton">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="text">
+        <string>&amp;Salveaza</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../resources.qrc">
+         <normaloff>:/accept</normaloff>:/accept</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>contractLineEdit</tabstop>
+  <tabstop>autoLineEdit</tabstop>
+  <tabstop>consilierComboBox</tabstop>
+  <tabstop>programareDateTimeEdit</tabstop>
+  <tabstop>programareCheckBox</tabstop>
+  <tabstop>contactatCheckBox</tabstop>
+  <tabstop>observatiiTextEdit</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>cancelButton</sender>
+   <signal>clicked()</signal>
+   <receiver>AddContract</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>196</x>
+     <y>265</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>37</x>
+     <y>232</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>programareCheckBox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>programareDateTimeEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>86</x>
+     <y>130</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>277</x>
+     <y>133</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainMdi</class>
+ <widget class="QWidget" name="MainMdi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Lista Contracte</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QTreeWidget" name="treeWidget">
+     <property name="styleSheet">
+      <string notr="true">QTreeView::branch:!adjoins-item {
+	background-image: url(:/tree);
+     }
+</string>
+     </property>
+     <property name="midLineWidth">
+      <number>1</number>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="showDropIndicator" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::ExtendedSelection</enum>
+     </property>
+     <column>
+      <property name="text">
+       <string>Contract</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>id</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Auto</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Numar Auto</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Data Adaugare</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>User Adaugare</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Programare</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Contactat</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Total</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Observatii</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

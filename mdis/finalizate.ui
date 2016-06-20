@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Finalizate</class>
+ <widget class="QWidget" name="Finalizate">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>808</width>
+    <height>598</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Contracte Finalizate</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources.qrc">
+    <normaloff>:/remove</normaloff>:/remove</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTreeWidget" name="treeWidget">
+     <property name="styleSheet">
+      <string notr="true">QTreeView::branch:!adjoins-item {
+	background-image: url(:/tree);
+     }
+</string>
+     </property>
+     <property name="midLineWidth">
+      <number>1</number>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="showDropIndicator" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::ExtendedSelection</enum>
+     </property>
+     <column>
+      <property name="text">
+       <string>Contract</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>id</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Auto</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Numar Auto</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Data Adaugare</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>User Adaugare</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Programare</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Contactat</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Total</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Motiv</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Observatii</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

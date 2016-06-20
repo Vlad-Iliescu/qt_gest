@@ -1,0 +1,4407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddRaport</class>
+ <widget class="QDialog" name="AddRaport">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>747</width>
+    <height>590</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Configurator Raport</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources.qrc">
+    <normaloff>:/calculator</normaloff>:/calculator</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="general">
+      <attribute name="title">
+       <string>&amp;General</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_29" stretch="0,0,0">
+       <item>
+        <widget class="QGroupBox" name="columsGroupBox">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_23">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>Nume</string>
+              </property>
+              <property name="buddy">
+               <cstring>numeEdit</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="numeEdit">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="totContractulCheckBox">
+            <property name="text">
+             <string>Tot Contractul</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Coloane :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QPushButton" name="checkAllButton">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string>Check All</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../resources.qrc">
+                <normaloff>:/checkall</normaloff>:/checkall</iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="uncheckAllButton">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string>Uncheck All</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../resources.qrc">
+                <normaloff>:/uncheckall</normaloff>:/uncheckall</iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QListWidget" name="coloaneListWidget">
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
+            <property name="dragEnabled">
+             <bool>true</bool>
+            </property>
+            <property name="dragDropMode">
+             <enum>QAbstractItemView::InternalMove</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="generalGroupBox">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_11">
+          <item>
+           <widget class="QWidget" name="contractWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>40</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="contractCheckBox">
+               <property name="text">
+                <string>Contract</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_6">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>81</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="contractLineEdit">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="autoWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>40</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="autoCheckBox">
+               <property name="text">
+                <string>Auto</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_7">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>100</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="autoLineEdit">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="denumireWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>40</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_13">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="denumireCheckBox">
+               <property name="text">
+                <string>Denumire</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_8">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>78</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="denumireLineEdit">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="oe_amWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>40</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="oe_amCheckBox">
+               <property name="text">
+                <string>OE/AM</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_9">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>90</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QComboBox" name="oe_amComboBox">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <item>
+                <property name="text">
+                 <string>OE</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>AM</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="consilierContractWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>40</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="consilier_contractCheckBox">
+               <property name="text">
+                <string>Consilier Contract</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_10">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>38</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="CheckBoxList" name="consilier_contractComboBox">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="consilierLucratWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>40</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="consilier_lucratCheckBox">
+               <property name="text">
+                <string>Consilier Lucrat</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_11">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>50</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="CheckBoxList" name="consilier_lucratComboBox">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="asiguratorWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>40</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_12">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="asiguratorCheckBox">
+               <property name="text">
+                <string>Asigurator</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_12">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>73</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="CheckBoxList" name="asiguratorComboBox">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="furnizorWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>40</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_9">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="furnizorCheckBox">
+               <property name="text">
+                <string>Furnizor</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_13">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>84</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="CheckBoxList" name="furnizorComboBox">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="codWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>40</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_15">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="codCheckBox">
+               <property name="text">
+                <string>Cod</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_14">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>104</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="codLineEdit">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="codCrossWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>40</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_16">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="cod_crossCheckBox">
+               <property name="text">
+                <string>Cod Cross</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_15">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>74</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="cod_crossLineEdit">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="userAdaugareContractWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>40</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_17">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="user_add_contractCheckBox">
+               <property name="text">
+                <string>User Adaugare Contract</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_16">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>6</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="CheckBoxList" name="user_add_contractComboBox">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="userAdaugareLinieWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>40</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_18">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="user_add_linieCheckBox">
+               <property name="text">
+                <string>User Adaugare Linie</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_17">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>27</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="CheckBoxList" name="user_add_linieComboBox">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="userMagazieWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>40</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_19">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="user_inCheckBox">
+               <property name="text">
+                <string>User Magazie</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_18">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>59</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="CheckBoxList" name="user_magazieComboBox">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="locatieWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>40</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_14">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="locatieCheckBox">
+               <property name="text">
+                <string>Locatie</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_19">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>89</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="locatieLineEdit">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="ofertaComandaWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>40</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_20">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="oferta_comandaCheckBox">
+               <property name="text">
+                <string>Oferta/Comanda</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_20">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>36</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QComboBox" name="oferta_comandaComboBox">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <item>
+                <property name="text">
+                 <string>Oferta</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Comanda</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="finalizatWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>40</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_21">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="finalizatCheckBox">
+               <property name="text">
+                <string>Finalizat</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_21">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>35</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QComboBox" name="finalizatComboBox">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <item>
+                <property name="text">
+                 <string>Nu</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Da</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="ofertaComandaWidget_2" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>40</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_25">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="motivCheckBox">
+               <property name="text">
+                <string>Motiv</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_25">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>36</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QComboBox" name="motivComboBox">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <item>
+                <property name="text">
+                 <string>Facturat</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Renuntat</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="observatiiWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>40</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_22">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="observatiiCheckBox">
+               <property name="text">
+                <string>Observatii</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_22">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>74</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="observatiiLineEdit">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_10">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="stareGroupBox">
+         <property name="title">
+          <string>Stare</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <widget class="QCheckBox" name="stare_intrare_nouaCheckBox">
+            <property name="text">
+             <string>Intrare Noua</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="stare_complectateCheckBox">
+            <property name="text">
+             <string>Complectata Consilier Piese</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="stare_revazutaCheckBox">
+            <property name="text">
+             <string>Revazuta </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="stare_comandataCheckBox">
+            <property name="text">
+             <string>Comandata</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="stare_piese_veniteCheckBox">
+            <property name="text">
+             <string>Piese Venite</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="partialCheckBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Partial</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="piese_neveniteCheckBox">
+            <property name="text">
+             <string>Piese Nevenite</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="nevenite_partialCheckBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Partial</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="stare_liniiCheckBox">
+            <property name="text">
+             <string>Linii sterse</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>233</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="date">
+      <attribute name="title">
+       <string>Data</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QGroupBox" name="dataAdaugareContractGroupBox">
+           <property name="title">
+            <string>Data Adaugare Contract</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_6">
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="date_add_aziCheckBox">
+              <property name="text">
+               <string>Azi</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1" colspan="3">
+             <widget class="QCheckBox" name="date_add_lunaCheckBox">
+              <property name="text">
+               <string>Luna Asta</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="date_add_acum_zileCheckBox">
+              <property name="text">
+               <string>Acum</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSpinBox" name="date_add_acum_zileSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>999</number>
+              </property>
+              <property name="value">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>zile</string>
+              </property>
+              <property name="buddy">
+               <cstring>date_add_acum_zileSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
+             <widget class="QCheckBox" name="date_add_acum_zile_intervalCheckBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Interval</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QCheckBox" name="date_add_acum_luniCheckBox">
+              <property name="text">
+               <string>Acum</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="date_add_acum_luniSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>999</number>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLabel" name="label_9">
+              <property name="text">
+               <string>luni</string>
+              </property>
+              <property name="buddy">
+               <cstring>date_add_acum_luniSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="3">
+             <widget class="QCheckBox" name="date_add_acum_luni_intervalCheckBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Interval</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0" colspan="4">
+             <layout class="QGridLayout" name="gridLayout_5">
+              <item row="0" column="0">
+               <widget class="QCheckBox" name="date_add_intreCheckBox">
+                <property name="text">
+                 <string>Intre</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QDateTimeEdit" name="date_add_minDateTimeEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="calendarPopup">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QDateTimeEdit" name="date_add_maxDateTimeEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="calendarPopup">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="dataAdaugareLinieGroupBox">
+           <property name="title">
+            <string>Data Adaugare Linie</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_9">
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="date_add_azi_linieCheckBox">
+              <property name="text">
+               <string>Azi</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1" colspan="3">
+             <widget class="QCheckBox" name="date_add_luna_linieCheckBox">
+              <property name="text">
+               <string>Luna Asta</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="date_add_acum_zile_linieCheckBox">
+              <property name="text">
+               <string>Acum</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSpinBox" name="date_add_acum_zile_linieSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>999</number>
+              </property>
+              <property name="value">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>zile</string>
+              </property>
+              <property name="buddy">
+               <cstring>date_add_acum_zile_linieSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
+             <widget class="QCheckBox" name="date_add_acum_zile_interval_linieCheckBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Interval</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QCheckBox" name="date_add_acum_luni_linieCheckBox">
+              <property name="text">
+               <string>Acum</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="date_add_acum_luni_linieSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>999</number>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLabel" name="label_11">
+              <property name="text">
+               <string>luni</string>
+              </property>
+              <property name="buddy">
+               <cstring>date_add_acum_luni_linieSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="3">
+             <widget class="QCheckBox" name="date_add_acum_luni_interval_linieCheckBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Interval</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0" colspan="4">
+             <layout class="QGridLayout" name="gridLayout_10">
+              <item row="0" column="0">
+               <widget class="QCheckBox" name="date_add_intre_linieCheckBox">
+                <property name="text">
+                 <string>Intre</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QDateTimeEdit" name="date_add_min_linieDateTimeEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="calendarPopup">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QDateTimeEdit" name="date_add_max_linieDateTimeEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="calendarPopup">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QGroupBox" name="dataAdaugareCompletareGroupBox">
+           <property name="title">
+            <string>Data Completare</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_8">
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="date_edit_aziCheckBox">
+              <property name="text">
+               <string>Azi</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1" colspan="3">
+             <widget class="QCheckBox" name="date_edit_lunaCheckBox">
+              <property name="text">
+               <string>Luna Asta</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="date_edit_acum_zileCheckBox">
+              <property name="text">
+               <string>Acum</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSpinBox" name="date_edit_acum_zileSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>999</number>
+              </property>
+              <property name="value">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLabel" name="label_23">
+              <property name="text">
+               <string>zile</string>
+              </property>
+              <property name="buddy">
+               <cstring>date_edit_acum_zileSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
+             <widget class="QCheckBox" name="date_edit_acum_zile_intervalCheckBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Interval</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QCheckBox" name="date_edit_acum_luniCheckBox">
+              <property name="text">
+               <string>Acum</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="date_edit_acum_luniSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>999</number>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLabel" name="label_22">
+              <property name="text">
+               <string>luni</string>
+              </property>
+              <property name="buddy">
+               <cstring>date_edit_acum_luniSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="3">
+             <widget class="QCheckBox" name="date_edit_acum_luni_intervalCheckBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Interval</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0" colspan="4">
+             <layout class="QGridLayout" name="gridLayout_7">
+              <item row="0" column="0">
+               <widget class="QCheckBox" name="date_edit_intreCheckBox">
+                <property name="text">
+                 <string>Intre</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QDateTimeEdit" name="date_edit_minDateTimeEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="calendarPopup">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QDateTimeEdit" name="date_edit_maxDateTimeEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="calendarPopup">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="dataReceptieGroupBox">
+           <property name="title">
+            <string>Data Receptie</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_11">
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="date_receptie_aziCheckBox">
+              <property name="text">
+               <string>Azi</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1" colspan="3">
+             <widget class="QCheckBox" name="date_receptie_lunaCheckBox">
+              <property name="text">
+               <string>Luna Asta</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="date_receptie_acum_zileCheckBox">
+              <property name="text">
+               <string>Acum</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSpinBox" name="date_receptie_acum_zileSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>999</number>
+              </property>
+              <property name="value">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLabel" name="label_24">
+              <property name="text">
+               <string>zile</string>
+              </property>
+              <property name="buddy">
+               <cstring>date_receptie_acum_zileSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
+             <widget class="QCheckBox" name="date_receptie_acum_zile_intervalCheckBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Interval</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QCheckBox" name="date_receptie_acum_luniCheckBox">
+              <property name="text">
+               <string>Acum</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="date_receptie_acum_luniSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>999</number>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLabel" name="label_25">
+              <property name="text">
+               <string>luni</string>
+              </property>
+              <property name="buddy">
+               <cstring>date_receptie_acum_luniSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="3">
+             <widget class="QCheckBox" name="date_receptie_acum_luni_intervalCheckBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Interval</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0" colspan="4">
+             <layout class="QGridLayout" name="gridLayout_12">
+              <item row="0" column="0">
+               <widget class="QCheckBox" name="date_receptie_intreCheckBox">
+                <property name="text">
+                 <string>Intre</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QDateTimeEdit" name="date_receptie_minDateTimeEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="calendarPopup">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QDateTimeEdit" name="date_receptie_maxDateTimeEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="calendarPopup">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>243</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="rest">
+      <attribute name="title">
+       <string>Restul</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QGroupBox" name="cantitateGroupBox">
+           <property name="title">
+            <string>Cantitate</string>
+           </property>
+           <layout class="QFormLayout" name="formLayout_2">
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="cantitate_eqCheckBox">
+              <property name="text">
+               <string>Cantitate =</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QSpinBox" name="cantitate_eqSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="cantitate_gtCheckBox">
+              <property name="text">
+               <string>Cantitate &gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSpinBox" name="cantitate_gtSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QCheckBox" name="cantitate_ltCheckBox">
+              <property name="text">
+               <string>Cantitate &lt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="cantitate_ltSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="cantitateReceptieGroupBox">
+           <property name="title">
+            <string>Cantitate Receptie</string>
+           </property>
+           <layout class="QFormLayout" name="formLayout_5">
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="cantitate_in_eqCheckBox">
+              <property name="text">
+               <string>Cantitate =</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QSpinBox" name="cantitate_in_eqSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="cantitate_in_gtCheckBox">
+              <property name="text">
+               <string>Cantitate &gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSpinBox" name="cantitate_in_gtSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QCheckBox" name="cantitate_in_ltCheckBox">
+              <property name="text">
+               <string>Cantitate &lt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="cantitate_in_ltSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="termenGroupBox">
+           <property name="title">
+            <string>Termen</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="termen_eqCheckBox">
+              <property name="text">
+               <string>Termen =</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QSpinBox" name="termen_eqSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="label_12">
+              <property name="text">
+               <string>zile</string>
+              </property>
+              <property name="buddy">
+               <cstring>termen_eqSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="termen_gtCheckBox">
+              <property name="text">
+               <string>Termen &gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSpinBox" name="termen_gtSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLabel" name="label_13">
+              <property name="text">
+               <string>zile</string>
+              </property>
+              <property name="buddy">
+               <cstring>termen_gtSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QCheckBox" name="termen_ltCheckBox">
+              <property name="text">
+               <string>Termen &lt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="termen_ltSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLabel" name="label_14">
+              <property name="text">
+               <string>zile</string>
+              </property>
+              <property name="buddy">
+               <cstring>termen_ltSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QCheckBox" name="termen_sosireCheckBox">
+              <property name="text">
+               <string>Sosire in  </string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QSpinBox" name="termen_sosireSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="2">
+             <widget class="QLabel" name="label_15">
+              <property name="text">
+               <string>zile</string>
+              </property>
+              <property name="buddy">
+               <cstring>termen_sosireSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QCheckBox" name="termen_depasitCheckBox">
+              <property name="text">
+               <string>Termen Depasit</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <widget class="QGroupBox" name="pretAchGroupBox">
+           <property name="title">
+            <string>Pret Achizitie</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="pret_a_eqCheckBox">
+              <property name="text">
+               <string>Pret Achizitie =</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QDoubleSpinBox" name="pret_a_eqSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="label_16">
+              <property name="text">
+               <string>Lei</string>
+              </property>
+              <property name="buddy">
+               <cstring>pret_a_eqSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="pret_a_gtCheckBox">
+              <property name="text">
+               <string>Pret Achizitie &gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QDoubleSpinBox" name="pret_a_gtSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLabel" name="label_17">
+              <property name="text">
+               <string>Lei</string>
+              </property>
+              <property name="buddy">
+               <cstring>pret_a_gtSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QCheckBox" name="pret_a_ltCheckBox">
+              <property name="text">
+               <string>Pret Achizitie &lt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QDoubleSpinBox" name="pret_a_ltSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLabel" name="label_18">
+              <property name="text">
+               <string>Lei</string>
+              </property>
+              <property name="buddy">
+               <cstring>pret_a_ltSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="pretVanzGroupBox">
+           <property name="title">
+            <string>Pret Vanzare</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_4">
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="pret_v_eqCheckBox">
+              <property name="text">
+               <string>Pret Vanzare =</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QDoubleSpinBox" name="pret_v_eqSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="label_21">
+              <property name="text">
+               <string>Lei</string>
+              </property>
+              <property name="buddy">
+               <cstring>pret_v_eqSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="pret_v_gtCheckBox">
+              <property name="text">
+               <string>Pret Vanzare &gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QDoubleSpinBox" name="pret_v_gtSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLabel" name="label_19">
+              <property name="text">
+               <string>Lei</string>
+              </property>
+              <property name="buddy">
+               <cstring>pret_v_gtSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QCheckBox" name="pret_v_ltCheckBox">
+              <property name="text">
+               <string>Pret Vanzare &lt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QDoubleSpinBox" name="pret_v_ltSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLabel" name="label_20">
+              <property name="text">
+               <string>Lei</string>
+              </property>
+              <property name="buddy">
+               <cstring>pret_v_ltSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <widget class="QGroupBox" name="programareGroupBox">
+           <property name="title">
+            <string>Programare</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="programare_aziCheckBox">
+              <property name="text">
+               <string>Azi</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1" colspan="2">
+             <widget class="QCheckBox" name="programare_maineCheckBox">
+              <property name="text">
+               <string>Maine</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QCheckBox" name="programare_lunaCheckBox">
+              <property name="text">
+               <string>Luna Asta</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="programare_acum_zileCheckBox">
+              <property name="text">
+               <string>Acum</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSpinBox" name="programare_acum_zileSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>zile</string>
+              </property>
+              <property name="buddy">
+               <cstring>programare_acum_zileSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
+             <widget class="QCheckBox" name="programare_acum_zile_intervalCheckBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Interval</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QCheckBox" name="programare_acum_luniCheckBox">
+              <property name="text">
+               <string>Acum</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="programare_acum_luniSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>luni</string>
+              </property>
+              <property name="buddy">
+               <cstring>programare_acum_luniSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="3">
+             <widget class="QCheckBox" name="programare_acum_luni_intervalCheckBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Interval</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QCheckBox" name="programare_peste_zileCheckBox">
+              <property name="text">
+               <string>Peste</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QSpinBox" name="programare_peste_zileSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="2">
+             <widget class="QLabel" name="label_8">
+              <property name="text">
+               <string>zile</string>
+              </property>
+              <property name="buddy">
+               <cstring>programare_peste_zileSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="3">
+             <widget class="QCheckBox" name="programare_peste_zile_intervalCheckBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Interval</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QCheckBox" name="programare_peste_luniCheckBox">
+              <property name="text">
+               <string>Peste</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QSpinBox" name="programare_peste_luniSpinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="2">
+             <widget class="QLabel" name="label_10">
+              <property name="text">
+               <string>luni</string>
+              </property>
+              <property name="buddy">
+               <cstring>programare_peste_luniSpinBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="3">
+             <widget class="QCheckBox" name="programare_peste_luni_intervalCheckBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Interval</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0" colspan="4">
+             <layout class="QFormLayout" name="formLayout_3">
+              <item row="0" column="0">
+               <widget class="QCheckBox" name="programare_intreCheckBox">
+                <property name="text">
+                 <string>Intre</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QDateTimeEdit" name="programare_intre_minDateTimeEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="calendarPopup">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QDateTimeEdit" name="programare_intre_maxDateTimeEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="calendarPopup">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="7" column="0">
+             <widget class="QCheckBox" name="programare_faraCheckBox">
+              <property name="text">
+               <string>Fara</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="contactatGroupBox">
+           <property name="title">
+            <string>Contactat</string>
+           </property>
+           <layout class="QFormLayout" name="formLayout_4">
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="contactatCheckBox">
+              <property name="text">
+               <string>Contactat</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="contactatComboBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <item>
+               <property name="text">
+                <string>Nu</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Da</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>139</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="active">
+      <attribute name="title">
+       <string>Active</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_13">
+         <item>
+          <widget class="QGroupBox" name="activeGeneralGroupBox">
+           <property name="title">
+            <string>General</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_10">
+            <item>
+             <widget class="QCheckBox" name="active_numeCheckBox">
+              <property name="text">
+               <string>Nume</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_contractCheckBox">
+              <property name="text">
+               <string>Contract</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_autoCheckBox">
+              <property name="text">
+               <string>Auto</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_denumireCheckBox">
+              <property name="text">
+               <string>Denumire</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_OE_AMcheckBox">
+              <property name="text">
+               <string>OE/AM</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_consilier_contractCheckBox">
+              <property name="text">
+               <string>Consilier Contract</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_consilier_lucratCheckBox">
+              <property name="text">
+               <string>Consilier Lucrat</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_asiguratorCheckBox">
+              <property name="text">
+               <string>Asigurator</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_furnizorCheckBox">
+              <property name="text">
+               <string>Furnizor</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_codCheckBox">
+              <property name="text">
+               <string>Cod</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_cod_crossCheckBox">
+              <property name="text">
+               <string>Cod Cross</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_user_add_contractCheckBox">
+              <property name="text">
+               <string>User Adaugare Contract</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_user_add_linieCheckBox">
+              <property name="text">
+               <string>User Adaugare Linie</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_user_magazieCheckBox">
+              <property name="text">
+               <string>User Magazie</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_locatieCheckBox">
+              <property name="text">
+               <string>Locatie</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_oferta_comandaCheckBox">
+              <property name="text">
+               <string>Oferta/Comanda</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_finalizatCheckBox">
+              <property name="text">
+               <string>Finalizat</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="activeObservatiiCheckBox">
+              <property name="text">
+               <string>Observatii</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_motivCheckBox">
+              <property name="text">
+               <string>Motiv</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_stareCheckBox">
+              <property name="text">
+               <string>Stare</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>17</width>
+             <height>13</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_14">
+         <item>
+          <widget class="QGroupBox" name="activaDataGroupBox">
+           <property name="title">
+            <string>Data</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <widget class="QCheckBox" name="active_data_add_contractCheckBox">
+              <property name="text">
+               <string>Data Adaugare Contract</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_data_add_linieCheckBox">
+              <property name="text">
+               <string>Data Adaugare Linie</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_data_completareCheckBox">
+              <property name="text">
+               <string>Data Completare</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_data_receptieCheckBox">
+              <property name="text">
+               <string>Data Receptie</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_8">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="active_checkAllButton">
+           <property name="text">
+            <string>&amp;Check All</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_15">
+         <item>
+          <widget class="QGroupBox" name="activeRestulGroupBox">
+           <property name="title">
+            <string>Restul</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_12">
+            <item>
+             <widget class="QCheckBox" name="active_cantitateCheckBox">
+              <property name="text">
+               <string>Cantitate</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_cantitate_receptieCheckBox">
+              <property name="text">
+               <string>Cantitate Receptie</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_termenCheckBox">
+              <property name="text">
+               <string>Termen</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_pret_aCheckBox">
+              <property name="text">
+               <string>Pret Achizitie</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_pret_vCheckBox">
+              <property name="text">
+               <string>Pret Vanzare</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_programareCheckBox">
+              <property name="text">
+               <string>Programare</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="active_contactatCheckBox">
+              <property name="text">
+               <string>Contactat</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_9">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="active_uncheckAllButton">
+           <property name="text">
+            <string>&amp;Uncheck All</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>Coloane Ascunse</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_16">
+          <item>
+           <widget class="QListWidget" name="active_coloaneListWidget">
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
+            <property name="dragEnabled">
+             <bool>true</bool>
+            </property>
+            <property name="dragDropMode">
+             <enum>QAbstractItemView::InternalMove</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="loadingLabel">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelButton">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="text">
+        <string>Anuleaza</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../resources.qrc">
+         <normaloff>:/cancel</normaloff>:/cancel</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveButton">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="text">
+        <string>Salveaza</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../resources.qrc">
+         <normaloff>:/accept</normaloff>:/accept</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="viewButton">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="text">
+        <string>Vizualizeaza</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../resources.qrc">
+         <normaloff>:/rapoarte</normaloff>:/rapoarte</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CheckBoxList</class>
+   <extends>QComboBox</extends>
+   <header>QCheckList/checkboxlist.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>viewButton</tabstop>
+  <tabstop>coloaneListWidget</tabstop>
+  <tabstop>contractCheckBox</tabstop>
+  <tabstop>contractLineEdit</tabstop>
+  <tabstop>autoCheckBox</tabstop>
+  <tabstop>autoLineEdit</tabstop>
+  <tabstop>denumireCheckBox</tabstop>
+  <tabstop>denumireLineEdit</tabstop>
+  <tabstop>oe_amCheckBox</tabstop>
+  <tabstop>oe_amComboBox</tabstop>
+  <tabstop>consilier_contractCheckBox</tabstop>
+  <tabstop>consilier_contractComboBox</tabstop>
+  <tabstop>consilier_lucratCheckBox</tabstop>
+  <tabstop>consilier_lucratComboBox</tabstop>
+  <tabstop>asiguratorCheckBox</tabstop>
+  <tabstop>asiguratorComboBox</tabstop>
+  <tabstop>furnizorCheckBox</tabstop>
+  <tabstop>furnizorComboBox</tabstop>
+  <tabstop>codCheckBox</tabstop>
+  <tabstop>codLineEdit</tabstop>
+  <tabstop>cod_crossCheckBox</tabstop>
+  <tabstop>cod_crossLineEdit</tabstop>
+  <tabstop>user_add_contractCheckBox</tabstop>
+  <tabstop>user_add_contractComboBox</tabstop>
+  <tabstop>user_add_linieCheckBox</tabstop>
+  <tabstop>user_add_linieComboBox</tabstop>
+  <tabstop>user_inCheckBox</tabstop>
+  <tabstop>user_magazieComboBox</tabstop>
+  <tabstop>locatieCheckBox</tabstop>
+  <tabstop>locatieLineEdit</tabstop>
+  <tabstop>oferta_comandaCheckBox</tabstop>
+  <tabstop>oferta_comandaComboBox</tabstop>
+  <tabstop>finalizatCheckBox</tabstop>
+  <tabstop>finalizatComboBox</tabstop>
+  <tabstop>observatiiCheckBox</tabstop>
+  <tabstop>observatiiLineEdit</tabstop>
+  <tabstop>stare_intrare_nouaCheckBox</tabstop>
+  <tabstop>stare_complectateCheckBox</tabstop>
+  <tabstop>stare_revazutaCheckBox</tabstop>
+  <tabstop>stare_comandataCheckBox</tabstop>
+  <tabstop>stare_piese_veniteCheckBox</tabstop>
+  <tabstop>partialCheckBox</tabstop>
+  <tabstop>piese_neveniteCheckBox</tabstop>
+  <tabstop>stare_liniiCheckBox</tabstop>
+  <tabstop>date_add_aziCheckBox</tabstop>
+  <tabstop>date_add_lunaCheckBox</tabstop>
+  <tabstop>date_add_acum_zileCheckBox</tabstop>
+  <tabstop>date_add_acum_zileSpinBox</tabstop>
+  <tabstop>date_add_acum_zile_intervalCheckBox</tabstop>
+  <tabstop>date_add_acum_luniCheckBox</tabstop>
+  <tabstop>date_add_acum_luniSpinBox</tabstop>
+  <tabstop>date_add_acum_luni_intervalCheckBox</tabstop>
+  <tabstop>date_add_intreCheckBox</tabstop>
+  <tabstop>date_add_minDateTimeEdit</tabstop>
+  <tabstop>date_add_maxDateTimeEdit</tabstop>
+  <tabstop>date_add_azi_linieCheckBox</tabstop>
+  <tabstop>date_add_luna_linieCheckBox</tabstop>
+  <tabstop>date_add_acum_zile_linieCheckBox</tabstop>
+  <tabstop>date_add_acum_zile_linieSpinBox</tabstop>
+  <tabstop>date_add_acum_zile_interval_linieCheckBox</tabstop>
+  <tabstop>date_add_acum_luni_linieCheckBox</tabstop>
+  <tabstop>date_add_acum_luni_linieSpinBox</tabstop>
+  <tabstop>date_add_acum_luni_interval_linieCheckBox</tabstop>
+  <tabstop>date_add_intre_linieCheckBox</tabstop>
+  <tabstop>date_add_min_linieDateTimeEdit</tabstop>
+  <tabstop>date_add_max_linieDateTimeEdit</tabstop>
+  <tabstop>date_edit_aziCheckBox</tabstop>
+  <tabstop>date_edit_lunaCheckBox</tabstop>
+  <tabstop>date_edit_acum_zileCheckBox</tabstop>
+  <tabstop>date_edit_acum_zileSpinBox</tabstop>
+  <tabstop>date_edit_acum_zile_intervalCheckBox</tabstop>
+  <tabstop>date_edit_acum_luniCheckBox</tabstop>
+  <tabstop>date_edit_acum_luniSpinBox</tabstop>
+  <tabstop>date_edit_acum_luni_intervalCheckBox</tabstop>
+  <tabstop>date_edit_intreCheckBox</tabstop>
+  <tabstop>date_edit_minDateTimeEdit</tabstop>
+  <tabstop>date_edit_maxDateTimeEdit</tabstop>
+  <tabstop>date_receptie_aziCheckBox</tabstop>
+  <tabstop>date_receptie_lunaCheckBox</tabstop>
+  <tabstop>date_receptie_acum_zileCheckBox</tabstop>
+  <tabstop>date_receptie_acum_zileSpinBox</tabstop>
+  <tabstop>date_receptie_acum_zile_intervalCheckBox</tabstop>
+  <tabstop>date_receptie_acum_luniCheckBox</tabstop>
+  <tabstop>date_receptie_acum_luniSpinBox</tabstop>
+  <tabstop>date_receptie_acum_luni_intervalCheckBox</tabstop>
+  <tabstop>date_receptie_intreCheckBox</tabstop>
+  <tabstop>date_receptie_minDateTimeEdit</tabstop>
+  <tabstop>date_receptie_maxDateTimeEdit</tabstop>
+  <tabstop>cantitate_eqCheckBox</tabstop>
+  <tabstop>cantitate_eqSpinBox</tabstop>
+  <tabstop>cantitate_gtCheckBox</tabstop>
+  <tabstop>cantitate_gtSpinBox</tabstop>
+  <tabstop>cantitate_ltCheckBox</tabstop>
+  <tabstop>cantitate_ltSpinBox</tabstop>
+  <tabstop>cantitate_in_eqCheckBox</tabstop>
+  <tabstop>cantitate_in_eqSpinBox</tabstop>
+  <tabstop>cantitate_in_gtCheckBox</tabstop>
+  <tabstop>cantitate_in_gtSpinBox</tabstop>
+  <tabstop>cantitate_in_ltCheckBox</tabstop>
+  <tabstop>cantitate_in_ltSpinBox</tabstop>
+  <tabstop>termen_eqCheckBox</tabstop>
+  <tabstop>termen_eqSpinBox</tabstop>
+  <tabstop>termen_gtCheckBox</tabstop>
+  <tabstop>termen_gtSpinBox</tabstop>
+  <tabstop>termen_ltCheckBox</tabstop>
+  <tabstop>termen_ltSpinBox</tabstop>
+  <tabstop>termen_sosireCheckBox</tabstop>
+  <tabstop>termen_sosireSpinBox</tabstop>
+  <tabstop>pret_a_eqCheckBox</tabstop>
+  <tabstop>pret_a_eqSpinBox</tabstop>
+  <tabstop>pret_a_gtCheckBox</tabstop>
+  <tabstop>pret_a_gtSpinBox</tabstop>
+  <tabstop>pret_a_ltCheckBox</tabstop>
+  <tabstop>pret_a_ltSpinBox</tabstop>
+  <tabstop>pret_v_eqCheckBox</tabstop>
+  <tabstop>pret_v_eqSpinBox</tabstop>
+  <tabstop>pret_v_gtCheckBox</tabstop>
+  <tabstop>pret_v_gtSpinBox</tabstop>
+  <tabstop>pret_v_ltCheckBox</tabstop>
+  <tabstop>pret_v_ltSpinBox</tabstop>
+  <tabstop>programare_aziCheckBox</tabstop>
+  <tabstop>programare_maineCheckBox</tabstop>
+  <tabstop>programare_lunaCheckBox</tabstop>
+  <tabstop>programare_acum_zileCheckBox</tabstop>
+  <tabstop>programare_acum_zileSpinBox</tabstop>
+  <tabstop>programare_acum_zile_intervalCheckBox</tabstop>
+  <tabstop>programare_acum_luniCheckBox</tabstop>
+  <tabstop>programare_acum_luniSpinBox</tabstop>
+  <tabstop>programare_acum_luni_intervalCheckBox</tabstop>
+  <tabstop>programare_peste_zileCheckBox</tabstop>
+  <tabstop>programare_peste_zileSpinBox</tabstop>
+  <tabstop>programare_peste_zile_intervalCheckBox</tabstop>
+  <tabstop>programare_peste_luniCheckBox</tabstop>
+  <tabstop>programare_peste_luniSpinBox</tabstop>
+  <tabstop>programare_peste_luni_intervalCheckBox</tabstop>
+  <tabstop>programare_intreCheckBox</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>programare_intre_minDateTimeEdit</tabstop>
+  <tabstop>programare_intre_maxDateTimeEdit</tabstop>
+  <tabstop>contactatCheckBox</tabstop>
+  <tabstop>contactatComboBox</tabstop>
+  <tabstop>active_contractCheckBox</tabstop>
+  <tabstop>active_autoCheckBox</tabstop>
+  <tabstop>active_denumireCheckBox</tabstop>
+  <tabstop>active_OE_AMcheckBox</tabstop>
+  <tabstop>active_consilier_contractCheckBox</tabstop>
+  <tabstop>active_consilier_lucratCheckBox</tabstop>
+  <tabstop>active_asiguratorCheckBox</tabstop>
+  <tabstop>active_furnizorCheckBox</tabstop>
+  <tabstop>active_codCheckBox</tabstop>
+  <tabstop>active_cod_crossCheckBox</tabstop>
+  <tabstop>active_user_add_contractCheckBox</tabstop>
+  <tabstop>active_user_add_linieCheckBox</tabstop>
+  <tabstop>active_user_magazieCheckBox</tabstop>
+  <tabstop>active_locatieCheckBox</tabstop>
+  <tabstop>active_oferta_comandaCheckBox</tabstop>
+  <tabstop>active_finalizatCheckBox</tabstop>
+  <tabstop>activeObservatiiCheckBox</tabstop>
+  <tabstop>active_stareCheckBox</tabstop>
+  <tabstop>active_data_add_contractCheckBox</tabstop>
+  <tabstop>active_data_add_linieCheckBox</tabstop>
+  <tabstop>active_data_completareCheckBox</tabstop>
+  <tabstop>active_data_receptieCheckBox</tabstop>
+  <tabstop>active_cantitateCheckBox</tabstop>
+  <tabstop>active_cantitate_receptieCheckBox</tabstop>
+  <tabstop>active_termenCheckBox</tabstop>
+  <tabstop>active_pret_aCheckBox</tabstop>
+  <tabstop>active_pret_vCheckBox</tabstop>
+  <tabstop>active_programareCheckBox</tabstop>
+  <tabstop>active_contactatCheckBox</tabstop>
+  <tabstop>cancelButton</tabstop>
+  <tabstop>saveButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>cancelButton</sender>
+   <signal>clicked()</signal>
+   <receiver>AddRaport</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>564</x>
+     <y>572</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>61</x>
+     <y>365</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_add_acum_zileCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_add_acum_zileSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>127</x>
+     <y>106</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_add_acum_zileCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_add_acum_zile_intervalCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>216</x>
+     <y>104</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_add_acum_luniCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_add_acum_luniSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>130</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>127</x>
+     <y>132</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_add_acum_luniCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_add_acum_luni_intervalCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>78</x>
+     <y>130</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>216</x>
+     <y>130</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_add_intreCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_add_minDateTimeEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>70</x>
+     <y>157</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>170</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_add_intreCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_add_maxDateTimeEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>74</x>
+     <y>157</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>178</x>
+     <y>185</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_edit_acum_zileCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_edit_acum_zileSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>293</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>341</x>
+     <y>106</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_edit_acum_zileCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_edit_acum_zile_intervalCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>293</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>430</x>
+     <y>104</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_edit_acum_luniCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_edit_acum_luniSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>293</x>
+     <y>130</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>341</x>
+     <y>132</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_edit_acum_luniCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_edit_acum_luni_intervalCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>293</x>
+     <y>130</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>430</x>
+     <y>130</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_edit_intreCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_edit_minDateTimeEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>293</x>
+     <y>157</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_edit_intreCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_edit_maxDateTimeEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>293</x>
+     <y>157</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>185</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cantitate_eqCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cantitate_eqSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>69</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>69</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cantitate_gtCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cantitate_gtSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>109</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>168</x>
+     <y>109</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cantitate_ltCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cantitate_ltSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>109</x>
+     <y>132</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>168</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>termen_eqCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>termen_eqSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>303</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>147</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>termen_gtCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>termen_gtSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>329</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>147</x>
+     <y>331</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>termen_ltCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>termen_ltSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>355</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>147</x>
+     <y>357</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>termen_sosireCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>termen_sosireSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>381</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>147</x>
+     <y>383</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pret_a_eqCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pret_a_eqSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>292</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>347</x>
+     <y>83</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pret_a_gtCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pret_a_gtSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>292</x>
+     <y>107</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>347</x>
+     <y>109</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pret_a_ltCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pret_a_ltSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>292</x>
+     <y>133</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>347</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pret_v_eqCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pret_v_eqSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>291</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>194</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pret_v_gtCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pret_v_gtSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>291</x>
+     <y>218</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>220</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pret_v_ltCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pret_v_ltSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>291</x>
+     <y>244</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>246</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>programare_acum_zileCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>programare_acum_zileSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>444</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>492</x>
+     <y>106</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>programare_acum_zileCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>programare_acum_zile_intervalCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>444</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>591</x>
+     <y>104</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>programare_acum_luniCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>programare_acum_luniSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>444</x>
+     <y>130</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>492</x>
+     <y>132</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>programare_acum_luniCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>programare_acum_luni_intervalCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>444</x>
+     <y>130</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>591</x>
+     <y>130</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>programare_peste_zileCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>programare_peste_zileSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>444</x>
+     <y>156</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>492</x>
+     <y>158</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>programare_peste_zileCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>programare_peste_zile_intervalCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>444</x>
+     <y>156</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>591</x>
+     <y>156</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>programare_peste_luniCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>programare_peste_luniSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>444</x>
+     <y>182</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>492</x>
+     <y>184</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>programare_peste_luniCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>programare_peste_luni_intervalCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>444</x>
+     <y>182</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>591</x>
+     <y>182</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>programare_intreCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>programare_intre_minDateTimeEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>442</x>
+     <y>208</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>548</x>
+     <y>211</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>programare_intreCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>programare_intre_maxDateTimeEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>442</x>
+     <y>208</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>548</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>contactatCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>contactatComboBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>317</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>619</x>
+     <y>320</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_add_acum_zile_linieCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_add_acum_zile_linieSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>266</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>127</x>
+     <y>268</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_add_acum_zile_linieCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_add_acum_zile_interval_linieCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>70</x>
+     <y>266</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>216</x>
+     <y>266</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_add_acum_luni_linieCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_add_acum_luni_linieSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>292</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>127</x>
+     <y>294</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_add_acum_luni_linieCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_add_acum_luni_interval_linieCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>292</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>216</x>
+     <y>292</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_add_intre_linieCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_add_min_linieDateTimeEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>319</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>185</x>
+     <y>321</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_add_intre_linieCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_add_max_linieDateTimeEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>77</x>
+     <y>319</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>170</x>
+     <y>347</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_receptie_acum_zileCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_receptie_acum_zileSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>293</x>
+     <y>266</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>341</x>
+     <y>268</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_receptie_acum_zileCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_receptie_acum_zile_intervalCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>293</x>
+     <y>266</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>430</x>
+     <y>266</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_receptie_acum_luniCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_receptie_acum_luniSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>293</x>
+     <y>292</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>341</x>
+     <y>294</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_receptie_acum_luniCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_receptie_acum_luni_intervalCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>293</x>
+     <y>292</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>430</x>
+     <y>292</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_receptie_intreCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_receptie_minDateTimeEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>293</x>
+     <y>319</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>321</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>date_receptie_intreCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>date_receptie_maxDateTimeEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>293</x>
+     <y>319</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>347</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cantitate_in_eqCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cantitate_in_eqSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>98</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>168</x>
+     <y>194</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cantitate_in_gtCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cantitate_in_gtSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>109</x>
+     <y>217</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>168</x>
+     <y>220</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cantitate_in_ltCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cantitate_in_ltSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>109</x>
+     <y>243</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>168</x>
+     <y>246</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>contractCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>contractLineEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>329</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>452</x>
+     <y>59</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>autoCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>autoLineEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>327</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>446</x>
+     <y>87</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>denumireCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>denumireLineEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>341</x>
+     <y>109</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>448</x>
+     <y>110</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>oe_amCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>oe_amComboBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>332</x>
+     <y>142</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>455</x>
+     <y>144</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>consilier_contractCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>consilier_contractComboBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>381</x>
+     <y>167</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>460</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>consilier_lucratCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>consilier_lucratComboBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>447</x>
+     <y>192</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>asiguratorCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>asiguratorComboBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>331</x>
+     <y>214</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>459</x>
+     <y>220</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>furnizorCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>furnizorComboBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>345</x>
+     <y>240</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>444</x>
+     <y>242</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>codCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>codLineEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>319</x>
+     <y>270</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>436</x>
+     <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cod_crossCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cod_crossLineEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>355</x>
+     <y>301</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>436</x>
+     <y>294</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>user_add_contractCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>user_add_contractComboBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>423</x>
+     <y>327</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>441</x>
+     <y>321</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>user_add_linieCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>user_add_linieComboBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>388</x>
+     <y>345</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>436</x>
+     <y>347</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>user_inCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>user_magazieComboBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>364</x>
+     <y>370</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>440</x>
+     <y>373</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>locatieCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>locatieLineEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>340</x>
+     <y>396</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>445</x>
+     <y>403</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>oferta_comandaCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>oferta_comandaComboBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>381</x>
+     <y>421</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>448</x>
+     <y>423</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>finalizatCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>finalizatComboBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>387</x>
+     <y>446</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>455</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>observatiiCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>observatiiLineEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>355</x>
+     <y>483</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>475</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>stare_piese_veniteCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>partialCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>623</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>582</x>
+     <y>185</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>piese_neveniteCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>nevenite_partialCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>628</x>
+     <y>216</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>620</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>motivCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>motivComboBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>321</x>
+     <y>499</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>447</x>
+     <y>508</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
